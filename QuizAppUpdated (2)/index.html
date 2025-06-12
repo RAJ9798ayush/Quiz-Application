@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-page">
+    <h2>Welcome to QuizMaster</h2>
+    <input type="text" placeholder="Enter your name" id="username" />
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <div class="category-select hide">
+    <h3>Select a subject</h3>
+    <button data-category="java">Java</button>
+    <button data-category="network">Computer Networks</button>
+    <button data-category="python">Python</button>
+    <button data-category="general">General</button>
+  </div>
+
+  <div class="start-btn hide">
+    <button>Start</button>
+  </div>
+
+  <div class="instruction hide">
+    <header>
+      <p>Some Rules of this quiz</p>
+    </header>
+    <div class="rules">
+      <p>1. You will have only <span>15 seconds</span> to answer each question</p>
+      <p>2. Once you select any option, it will be your final answer</p>
+      <p>3. It can't be undone</p>
+      <p>4. For each correct answer you will earn points</p>
+      <p>5. Total score will be revealed at the end</p>
+    </div>
+    <div class="instruction-btn">
+      <button>Exit Quiz</button>
+      <button>Start Quiz</button>
+    </div>
+  </div>
+
+  <div class="wrapper hide">
+    <header>
+      <h4>Excellent Quiz App</h4>
+      <div class="Timer">
+        <p>Time Left</p>
+        <p>15</p>
+      </div>
+    </header>
+    <div class="timer-progress">
+      <div class="inner"></div>
+    </div>
+    <div class="question-container"></div>
+    <div class="option-container"></div>
+    <div class="status">
+      <p class="question-num">
+        <span class="current-question">1</span>
+        <span>of</span>
+        <span class="total-question">8</span>
+        <span>Questions</span>
+      </p>
+      <div class="btn">
+        <button>Next</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-card hide">
+    <header><p>Result</p></header>
+    <div class="image">
+      <div class="user-score">
+        <p class="value">30</p>
+        <p>Your Score</p>
+      </div>
+    </div>
+    <div class="score">
+      <div class="total-score"><p class="value">50</p><p>Total Score</p></div>
+      <div class="attempted"><p class="value">27</p><p>Attempted</p></div>
+      <div class="unattempted"><p class="value">23</p><p>Unattempted</p></div>
+      <div class="wrong"><p class="value">10</p><p>Wrong</p></div>
+    </div>
+    <div class="score-btn">
+      <button>Replay Quiz</button>
+      <button>Exit Quiz</button>
+    </div>
+  </div>
+
+  <div class="thank-you-page hide">
+    <h2>Thank You for Participating, <span id="userDisplay"></span>!</h2>
+    <p>We hope you enjoyed the <span id="categoryDisplay"></span> quiz.</p>
+    <button id="returnHome">Return to Home</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
